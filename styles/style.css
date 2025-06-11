@@ -1,7 +1,11 @@
+/* MIXINS */
 /* TAGS */
+:root {
+  font-family: system-ui, sans-serif;
+}
+
 body {
   background: black;
-  background: linear-gradient(90deg, var(--base0C) 0%, var(--base0B) 50%, var(--base0A) 100%);
 }
 body {
   opacity: 0;
@@ -17,15 +21,23 @@ body * {
   cursor: default;
   text-align: center;
   color: var(--base07);
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
+}
+body *::-moz-selection {
+  color: var(--base07);
+  background: var(--base0D);
+}
+body *::selection {
+  color: var(--base07);
+  background: var(--base0D);
 }
 
 main {
   margin: auto;
-  max-width: 20rem;
+  max-width: 22rem;
 }
 main > * {
-  padding: 0.5rem;
+  padding: 0.8rem;
   margin-top: 1.5rem;
   background-color: var(--base00);
 }
@@ -34,24 +46,36 @@ main nav {
   justify-content: space-between;
 }
 main select {
-  font-size: 0.5rem;
+  text-align: right;
+  background-color: var(--base00);
 }
 main hr {
-  border: 1px solid var(--base07);
-  margin-bottom: 1rem !important;
+  height: 3px;
+  background: linear-gradient(90deg, var(--base0C) 0%, var(--base0B) 50%, var(--base0A) 100%);
+  margin: 1rem 0rem;
+}
+main i {
+  margin: 0rem 0.5rem;
 }
 main i, main span {
   color: var(--base0D);
 }
 main select, main button {
   cursor: pointer;
-  background-color: var(--base01);
 }
 
 main #section-2 > div:last-child {
   gap: 1rem;
   display: grid;
   grid-template-columns: auto auto;
+}
+main #navbar {
+  display: flex;
+  justify-content: space-between;
+}
+main nav > div:first-child {
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

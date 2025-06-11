@@ -1,9 +1,19 @@
+/* MIXINS */
+
+@mixin gradient {
+	background: linear-gradient(90deg, var(--base0C) 0%, var(--base0B) 50%, var(--base0A) 100%);
+}
+
 /* TAGS */
+
+:root {
+	font-family: system-ui, sans-serif;
+}
 
 body {
 	& {
 		background: black;
-		background: linear-gradient(90deg, var(--base0C) 0%, var(--base0B) 50%, var(--base0A) 100%);
+		// @include gradient;
 	}
 
 	& {
@@ -22,18 +32,28 @@ body {
 		cursor: default;
 		text-align: center;
 		color: var(--base07);
-		border-radius: 0.2rem;
+		border-radius: 0.3rem;
+	}
+
+	*::-moz-selection {
+  		color: var(--base07);
+  		background: var(--base0D);
+	}
+
+	*::selection {
+		color: var(--base07);
+  		background: var(--base0D);
 	}
 }
 
 main {
 	& {
   		margin: auto;
-		max-width: 20rem;
+		max-width: 22rem;
 	}
 
 	> * {
-		padding: 0.5rem;
+		padding: 0.8rem;
 		margin-top: 1.5rem;
 		background-color: var(--base00);
 	}
@@ -44,12 +64,18 @@ main {
 	}
 
 	select {
-		font-size: 0.5rem;
+		text-align: right;
+		background-color: var(--base00);
 	}
 
 	hr {
-		border: 1px solid var(--base07);
-		margin-bottom: 1rem !important;
+		height: 3px;
+		@include gradient;
+		margin: 1rem 0rem;
+	}
+
+	i {
+		margin: 0rem 0.5rem;
 	}
 
 	i, span {
@@ -58,7 +84,6 @@ main {
 
 	select, button {
 		cursor: pointer;
-		background-color: var(--base01);
 	}
 }
 
@@ -67,5 +92,15 @@ main {
 		gap: 1rem;
 		display: grid;
 		grid-template-columns: auto auto;
+	}
+
+	#navbar {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	nav > div:first-child {
+		display: flex;
+		align-items: center;
 	}
 }
