@@ -1,0 +1,57 @@
+/* TAGS */
+body {
+  background: black;
+  background: linear-gradient(90deg, var(--base0C) 0%, var(--base0B) 50%, var(--base0A) 100%);
+}
+body {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+body * {
+  border: none;
+  cursor: default;
+  text-align: center;
+  color: var(--base07);
+  border-radius: 0.2rem;
+}
+
+main {
+  margin: auto;
+  max-width: 20rem;
+}
+main > * {
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  background-color: var(--base00);
+}
+main nav {
+  display: flex;
+  justify-content: space-between;
+}
+main select {
+  font-size: 0.5rem;
+}
+main hr {
+  border: 1px solid var(--base07);
+  margin-bottom: 1rem !important;
+}
+main i, main span {
+  color: var(--base0D);
+}
+main select, main button {
+  cursor: pointer;
+  background-color: var(--base01);
+}
+
+main #section-2 > div:last-child {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/*# sourceMappingURL=style.css.map */

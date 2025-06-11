@@ -1,2 +1,3 @@
-# kangen-water
+# Kangen-water
+
 Website for my mother who works for kangen water company.
